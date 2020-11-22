@@ -6,20 +6,33 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
 	<link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
 </head>
 <body>
 
-	 <div class="header">
+	<!-- Progress Bar -->
+    <div class="header">
         <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
         </div>
     </div>
 
+    <script type="text/javascript">
+    window.onscroll = function() {scrollbarFunction()};
+
+    function scrollbarFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+    }
+    </script>
+
    
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a href="" class="navbar-brand text-dark">Vibe Bontique</a>
+        <a href="" class="navbar-brand font">Vibe Bontique</a>
         <img src="../image/logo.png" style="width: 50px;height: 50px;" class="">
         <button class="navbar-toggler" data-target="#Navbar" data-toggle="collapse">
             <span class="navbar-toggler-icon"></span>
@@ -49,7 +62,7 @@
 
     	<div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="../image/man1.jpg" style="width: 1500px; height: 500px;" class="img-fluid darkened-image">
+                <img src="../image/mencover.jpg" style="width: 1980px; height: 1080px" class="img-fluid darkened-image">
                     <div class="carousel-caption">
                         <h2>New Arrival</h2>
 						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque</p>
@@ -57,7 +70,7 @@
             </div>
 
             <div class="carousel-item">
-                <img src="../image/man2.jpg" style="width: 1500px; height: 500px;" class="img-fluid darkened-image">
+                <img src="../image/mencover2.jpg" style="width: 1980px; height: 1080px" class="img-fluid darkened-image">
                     <div class="carousel-caption">
                         <h2>New Arrival</h2>
 						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque</p>
@@ -65,7 +78,7 @@
             </div>
 
             <div class="carousel-item">
-                <img src="../image/man3.jpg" style="width: 1500px; height: 500px;" class="img-fluid darkened-image">
+                <img src="../image/mencover3.jpg" style="width: 1980px; height: 1080px" class="img-fluid darkened-image">
                     <div class="carousel-caption">
                         <h2>New Arrival</h2>
 						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque</p>
@@ -92,7 +105,7 @@
 			<div class="col-sm-6 col-lg-3">
 				<div class="card border-0">
 					<div class="card-body">
-						<img src="../image/ck1.jpg" id="myimg1" class="myimg img-fluid" style="width: 200px; height: auto">
+						<img src="../image/men1.jpg" id="myimg1" class="myimg img-fluid" style="width: 200px; height: auto">
 						<h6 class="text-center">Cloth1</h6>
 						<h6 class="text-center">Price($100)</h6>
 						<div class="text-center"><button class="btn btn-outline-dark">Add to cart</button></div>
@@ -102,7 +115,7 @@
 			<div class="col-sm-6 col-lg-3">
 				<div class="card border-0">
 					<div class="card-body">
-						<img src="../image/ck3.jpg" id="myimg2" class="myimg img-fluid" style="width: 200px; height: auto">
+						<img src="../image/men3.jpg" id="myimg2" class="myimg img-fluid" style="width: 200px; height: auto">
 						<h6 class="text-center">Cloth2</h6>
 						<h6 class="text-center">Price($150)</h6>
 						<div class="text-center"><button class="btn btn-outline-dark">Add to cart</button></div>
@@ -112,7 +125,7 @@
 			<div class="col-sm-6 col-lg-3">
 				<div class="card border-0">
 					<div class="card-body">
-						<img src="../image/ck5.jpg" id="myimg3" class="myimg img-fluid" style="width: 200px; height: auto">
+						<img src="../image/men5.jpg" id="myimg3" class="myimg img-fluid" style="width: 200px; height: auto">
 						<h6 class="text-center">Cloth3</h6>
 						<h6 class="text-center">Price($250)</h6>
 						<div class="text-center"><button class="btn btn-outline-dark">Add to cart</button></div>
@@ -122,7 +135,7 @@
 			<div class="col-sm-6 col-lg-3">
 				<div class="card border-0">
 					<div class="card-body">
-						<img src="../image/ck7.jpg" id="myimg4" class="myimg img-fluid" style="width: 200px; height: auto">
+						<img src="../image/men7.jpg" id="myimg4" class="myimg img-fluid" style="width: 200px; height: auto">
 						<h6 class="text-center">Cloth4</h6>
 						<h6 class="text-center">Price($300)</h6>
 						<div class="text-center"><button class="btn btn-outline-dark">Add to cart</button></div>
@@ -142,7 +155,7 @@
 			<div class="col-sm-6 col-lg-3">
 				<div class="card border-0">
 					<div class="card-body cardborder">
-						<img src="../image/shoes1.jpg" class="img-fluid" style="width: 200px; height: auto">
+						<img src="../image/menshoe1.jpg" class="img-fluid" style="width: 200px; height: auto">
 						<h6 class="text-center">Shoes1</h6>
 						<h6 class="text-center">Price($300)</h6>
 						<div class="text-center"><button class="btn btn-outline-dark">Add to cart</button></div>
@@ -152,7 +165,7 @@
 			<div class="col-sm-6 col-lg-3">
 				<div class="card border-0">
 					<div class="card-body cardborder">
-						<img src="../image/shoes2.jpg" class="img-fluid" style="width: 200px; height: auto">
+						<img src="../image/menshoe2.jpg" class="img-fluid" style="width: 200px; height: auto">
 						<h6 class="text-center">Shoes2</h6>
 						<h6 class="text-center">Price($150)</h6>
 						<div class="text-center"><button class="btn btn-outline-dark">Add to cart</button></div>
@@ -162,7 +175,7 @@
 			<div class="col-sm-6 col-lg-3">
 				<div class="card border-0">
 					<div class="card-body cardborder">
-						<img src="../image/shoes3.jpg" class="img-fluid" style="width: 200px; height: auto">
+						<img src="../image/menshoe3.jpg" class="img-fluid" style="width: 200px; height: auto">
 						<h6 class="text-center">Shoes3</h6>
 						<h6 class="text-center">Price($250)</h6>
 						<div class="text-center"><button class="btn btn-outline-dark">Add to cart</button></div>
@@ -172,7 +185,7 @@
 			<div class="col-sm-6 col-lg-3">
 				<div class="card border-0">
 					<div class="card-body cardborder">
-						<img src="../image/shoes2.jpg" class="img-fluid" style="width: 200px; height: auto">
+						<img src="../image/menshoe4.jpg" class="img-fluid" style="width: 200px; height: auto">
 						<h6 class="text-center">Shoes4</h6>
 						<h6 class="text-center">Price($300)</h6>
 						<div class="text-center"><button class="btn btn-outline-dark">Add to cart</button></div>
@@ -184,13 +197,13 @@
 	</div>
 
 	<div class="container">
-		<h2 class="text-center">Bags</h2>
+		<h2 class="text-center">Hats</h2>
 		<div class="row my-4">
 			<div class="col-sm-6 col-lg-3">
 				<div class="card border-0">
 					<div class="card-body">
-						<img src="../image/bag1.jpg" class="img-fluid" style="width: 200px; height: auto">
-						<h6 class="text-center">Bag1</h6>
+						<img src="../image/hat1.jpg" class="img-fluid" style="width: 200px; height: auto">
+						<h6 class="text-center">Hat1</h6>
 						<h6 class="text-center">Price($100)</h6>
 						<div class="text-center"><button class="btn btn-outline-dark">Add to cart</button></div>
 					</div>
@@ -199,8 +212,8 @@
 			<div class="col-sm-6 col-lg-3">
 				<div class="card border-0">
 					<div class="card-body">
-						<img src="../image/bag2.jpg" class="img-fluid" style="width: 200px; height: auto">
-						<h6 class="text-center">Bag2</h6>
+						<img src="../image/hat2.jpg" class="img-fluid" style="width: 200px; height: auto">
+						<h6 class="text-center">Hat2</h6>
 						<h6 class="text-center">Price($150)</h6>
 						<div class="text-center"><button class="btn btn-outline-dark">Add to cart</button></div>
 					</div>
@@ -209,8 +222,8 @@
 			<div class="col-sm-6 col-lg-3">
 				<div class="card border-0">
 					<div class="card-body">
-						<img src="../image/bag3.jpg" class="img-fluid" style="width: 200px; height: auto">
-						<h6 class="text-center">Bag3</h6>
+						<img src="../image/hat3.jpg" class="img-fluid" style="width: 200px; height: auto">
+						<h6 class="text-center">Hat3</h6>
 						<h6 class="text-center">Price($250)</h6>
 						<div class="text-center"><button class="btn btn-outline-dark">Add to cart</button></div>
 					</div>
@@ -219,8 +232,8 @@
 			<div class="col-sm-6 col-lg-3">
 				<div class="card border-0">
 					<div class="card-body">
-						<img src="../image/bag4.jpg" class="img-fluid" style="width: 200px; height: auto">
-						<h6 class="text-center">Bag4</h6>
+						<img src="../image/hat4.jpg" class="img-fluid" style="width: 200px; height: auto">
+						<h6 class="text-center">Hat4</h6>
 						<h6 class="text-center">Price($300)</h6>
 						<div class="text-center"><button class="btn btn-outline-dark">Add to cart</button></div>
 					</div>
@@ -252,25 +265,25 @@
 		    }
 
 			$("#myimg1").mouseover(function(){
-				$('#myimg1').attr("src","../image/ck2.jpg")
+				$('#myimg1').attr("src","../image/men2.jpg")
 				
 				
 				
 			})
 
 			$("#myimg2").mouseover(function(){
-				$('#myimg2').attr("src","../image/ck4.jpg");
+				$('#myimg2').attr("src","../image/men4.jpg");
 			
 			})
 
 
 			$("#myimg3").mouseover(function(){
-				$('#myimg3').attr("src","../image/ck6.jpg")
+				$('#myimg3').attr("src","../image/men6.jpg")
 				
 			})
 
 			$("#myimg4").mouseover(function(){
-				$('#myimg4').attr("src","../image/ck8.jpg")
+				$('#myimg4').attr("src","../image/men8.jpg")
 			})
 
 			$(".cardborder").mouseover(function(){
