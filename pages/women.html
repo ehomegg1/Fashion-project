@@ -6,16 +6,54 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">	
 	<link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+    <style type="text/css">
+    	
+    	.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+
+.progress-bar {
+  height: 8px;
+  background: #775da8;
+  width: 0%;
+}
+
+    </style>
 </head>
 
 	
 <body>
 
-	 <div class="header">
+	<!-- Progress Bar -->
+    <div class="header">
         <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
         </div>
     </div>
+
+    <script type="text/javascript">
+    window.onscroll = function() {scrollbarFunction()};
+
+    function scrollbarFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+    }
+    </script>
 
    
 
