@@ -143,6 +143,12 @@
   font-size: 50px;
 }
 
+.font2{
+  font-family: "Anton";
+  font-size: 20px;
+}
+
+/*font end here*/
 /*brand slider*/
 .text{
   position: absolute;
