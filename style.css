@@ -136,7 +136,12 @@
 
 /*Show Button on Hover Testing End*/
 
+/*Font*/
 
+.font{
+  font-family: "Sofia";
+  font-size: 50px;
+}
 
 /*brand slider*/
 .text{
