@@ -8,10 +8,10 @@
 
         
         <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
-        <script type = "text/javascript" src = "jquery.min.js"></script>
+        <script type = "text/javascript" src = "../jquery.min.js"></script>
         <script type = "text/javascript">
-            $document.ready(function(){
-                showdata();
+            $(document).ready(function(){
+                //showdata();
 
                 $("#btnregister").click(function(){
                     var firstname = $("#Fname").val();
@@ -19,8 +19,8 @@
                     var age = $("#age").val();
                     var email = $("#email").val();
                     var password = $("#password").val();
-                    var phonenumber = $("#number").val();
-                    var gender = $("input[name = 'gender']:checked").val();
+                    //var number = $("#number").val();
+                    //var gender = $("input[name = 'gender']:checked").val();
 
                     var customer = {
                         firstname : firstname,
@@ -28,10 +28,26 @@
                         age : age,
                         email: email,
                         password: password,
-                        gender: gender,
+                        //number: number,
+                        //gender: gender,
+                        
                     }
 
                     console.log(customer);
+                    var customerlist = localStorage.getItem("customer");
+                    var customerArray;
+                    if(customerlist == null){
+                        customerArray = [];
+                    }
+                    else{
+                        customerArray = JSON.parse(customerArray);
+                    }
+                    customerArray.push(customer);
+                    //console.log(customerArray);
+
+                    var stringcustomer = JSON.stringify(customerArray);
+                    localStorage.setItem("customer",stringcustomer);
+                    
                 })
             })
         
@@ -74,27 +90,28 @@
                     At least 8 characters and 1 digit
                 </small>
             </div>
-
-            <div class = "p-2 col-lg-12">
-                <!--phone number-->
+            <!--phone number-->
+            <!-- <div class = "p-2 col-lg-12">
+                
                 <input type = "text" name = "Phone" id = "number" class = "form-control" placeholder="Phone Number">
                 <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted">
                     Optional - for two step authentication
                 </small>
-            </div>
+            </div> -->
 
-            <div>
+            
                 <!-- Subject -->
-                <label>Gender</label>
-                <select class="browser-default custom-select mb-4">
-                    <option value="" disabled>Choose option</option>
+                
+                        <!-- <div class = "form-check-inline">
+                            <input type = "radio" name = "gender" value = "Male" id = "Male" class = "form-check-input">
+                            <label for = "Male" class = "form-check-label">Male</label>
+                        </div>
+                        <div class = "form-check-inline">
+                            <input type = "radio" name = "gender" value = "Female" id = "Female" class = "form-check-input">
+                            <label for = "Female" class = "form-check-label">Female</label>
+                        </div> -->
+            
                     
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    
-                </select>
-            </div>
-
             <!-- Send button -->
             <button class="btn btn-info btn-block" id = "btnregister" type="submit">Register</button>
 
