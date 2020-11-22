@@ -1,59 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Register Form</title>
+        <title>Sign In</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel = "stylesheet" type = "text/css" href = "../bootstrap/css/bootstrap.min.css">
 
-        
+        <script>
+            function register() {
+                var n1=document.getElementById('Fname').value
+                var n2=document.getElementById('Lname').value
+                var n3=n1+n2;
+                
+                var n = confirm("Welcome Successfully "+n3+"!");
+                if (n == true) {
+                    window.location.assign("singin.html");
+                } 
+                else {
+                    n3 = "You pressed Cancel!";
+                }
+                document.getElementById("form").reset();
+            }
+        </script>
+
         <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min.css">
-        <script type = "text/javascript" src = "../jquery.min.js"></script>
+        <script type = "text/javascript" src = "jquery.min.js"></script>
         
     </head>
     <body>
 
-        <!-- #fff296 -->
-
-    <!-- Progress Bar -->
-    <div class="header">
-        <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
-        </div>
-    </div>
-
-    <script type="text/javascript">
-    window.onscroll = function() {scrollbarFunction()};
-
-    function scrollbarFunction() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
-    }
-    </script>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a href="" class="navbar-brand text-dark">Vibe Bontique</a>
-        <img src="../image/logo.png" style="width: 50px;height: 50px;" class="">
-        <button class="navbar-toggler" data-target="#Navbar" data-toggle="collapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="Navbar">
-                <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a href="../index.html" class="nav-link mx-3">Home</a></li>
-                <li class="nav-item"><a href="" class="nav-link mx-3">Women</a></li>
-                <li class="nav-item"><a href="" class="nav-link mx-3">Men</a></li>
-                <li class="nav-item"><a href="" class="nav-link mx-3">Kids</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link mx-3">Contact</a></li>
-                <li class="nav-item"><a href="register form.html" class="nav-link mx-3"><i class="fas fa-sign-in-alt"></i></a></li>
-            </ul>
-        </div>
-    </nav>
-
-        <form class="text-center border border-light p-5" action="#!">
+        <form id="form" class="text-center border border-light p-5" action="#!">
 
             <h3 class = "my-4">Register</h3>
 
@@ -85,36 +61,34 @@
                     At least 8 characters and 1 digit
                 </small>
             </div>
-            <!--phone number-->
-            <!-- <div class = "p-2 col-lg-12">
-                
+
+            <div class = "p-2 col-lg-12">
+                <!--phone number-->
                 <input type = "text" name = "Phone" id = "number" class = "form-control" placeholder="Phone Number">
                 <small id="defaultRegisterFormPhoneHelpBlock" class="form-text text-muted">
                     Optional - for two step authentication
                 </small>
-            </div> -->
+            </div>
 
-            
+            <div>
                 <!-- Subject -->
-                
-                        <!-- <div class = "form-check-inline">
-                            <input type = "radio" name = "gender" value = "Male" id = "Male" class = "form-check-input">
-                            <label for = "Male" class = "form-check-label">Male</label>
-                        </div>
-                        <div class = "form-check-inline">
-                            <input type = "radio" name = "gender" value = "Female" id = "Female" class = "form-check-input">
-                            <label for = "Female" class = "form-check-label">Female</label>
-                        </div> -->
-            
+                <label>Gender</label>
+                <select class="browser-default custom-select mb-4">
+                    <option value="" disabled>Choose option</option>
                     
-            <!-- Send button -->
-            <button class="btn btn-info btn-block" id = "btnregister" type="submit">Register</button>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    
+                </select>
+            </div>
 
-            <!-- Footer Here -->
-    <div class="jumbotron my-3">
-        <div class="text-left">Copyright@ Vibe Bontique</div>
-        <div class="text-right">Subscribe to us<input type="text" name=""></div>
-    </div>
+            <!-- Send button -->
+            <!-- <button class="btn btn-info btn-block" id = "btnregister" type="submit" onclick="login()">Register</button> -->
+
+            <input class="btn btn-outline-secondary" type="button" value="Register" onclick="register()">
+
+
+
             
         </form>
 
