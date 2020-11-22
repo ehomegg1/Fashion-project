@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Home Page</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -40,7 +40,7 @@
                 <li class="nav-item"><a href="" class="nav-link mx-3">Women</a></li>
                 <li class="nav-item"><a href="" class="nav-link mx-3">Men</a></li>
                 <li class="nav-item"><a href="" class="nav-link mx-3">Kids</a></li>
-                <li class="nav-item"><a href="" class="nav-link mx-3">Contact</a></li>
+                <li class="nav-item"><a href="pages/register form.html" class="nav-link mx-3">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -237,13 +237,57 @@
         </div>
     </div>
 
+    <div class="container">
+        <h2>Our Availabe International Brand</h2>
+         <section class="customer-logos slider my-3">
+            <div class="slide"><img src="image/hermes.jpg"></div>
+            <div class="slide"><img src="image/prada.jpg"></div>
+            <div class="slide"><img src="image/chanel.jpg"></div>
+            <div class="slide"><img src="image/RALPH LAUREN.jpg"></div>
+            <div class="slide"><img src="image/BURBERRY.jpg"></div>
+            <div class="slide"><img src="image/HOUSE OF VERSACE..jfif"></div>
+            <div class="slide"><img src="image/FENDI.png"></div>
+            <div class="slide"><img src="image/armani.jpg"></div>
+         </section>
+      </div>
+
+    
     <!-- Footer Here -->
     <div class="jumbotron my-3">
         <div class="text-left">Copyright@ Vibe Bontique</div>
         <div class="text-right">Subscribe to us<input type="text" name=""></div>
     </div>
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  
+   
+
+  
+  <script type="text/javascript" src="bootstrap/js/jquery.min.js"></script>
+  <script type="text/javascript" src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+  <script type = "text/javascript">
+  $(document).ready(function(){
+      $('.customer-logos').slick({
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 1500,
+          arrows: false,
+          dots: false,
+          pauseOnHover: false,
+          responsive: [{
+              breakpoint: 768,
+              settings: {
+                  slidesToShow: 4
+              }
+          }, {
+              breakpoint: 520,
+              settings: {
+                  slidesToShow: 3
+              }
+          }]
+      });
+  });
+</script>
 </body>
 </html>
