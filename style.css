@@ -2,6 +2,10 @@
 	filter: brightness(75%);
 }
 
+.overlay-dark:hover{
+  filter: brightness(50%);
+  transition: 0.5s ease;
+}
 
 
 
@@ -60,29 +64,75 @@
 
 /*Show Button on Hover Testing 2*/
 
-.scale-button{
-  position:relative;
-  text-align: center;
+.box {
+  position: relative;
+  width: 500px;
+  height: 450px;
 }
 
-.centered{
+.overlay {
   position: absolute;
-  right:25%;
-  top:50%;
-  transform: translate(-50%,-50%);
-  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.5s ease;
 }
 
-.overlay-dark:hover{
-  filter: brightness(50%);
-  transition: 0.5s ease;
+.box:hover .overlay {
+  display: block;
+  background: rgba(0, 0, 0, .3);
 }
 
-.overlay-dark:hover.centered{
-  visibility: visible;
+.button-small {
+  position: absolute;
+  width: 500px;
+  left:0;
+  top: 180px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.button-big {
+  position: absolute;
+  width: 500px;
+  left:0;
+  top: 180px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+
+.button-small a {
+  margin-left: -35%;
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+}
+
+.button-big a {
+  margin-left: 75%;
+  width: 200px;
+  padding: 12px 48px;
+  text-align: center;
+  color: white;
+  border: solid 2px white;
+  z-index: 1;
+}
+
+.box:hover .button-small {
   opacity: 1;
 }
 
+.box:hover .button-big {
+  opacity: 1;
+}
 
 /*Show Button on Hover Testing End*/
 
