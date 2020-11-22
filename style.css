@@ -7,6 +7,10 @@
   transition: 0.5s ease;
 }
 
+.jumbotron-image{
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 
 
 /*Progress Bar CSS*/
@@ -146,6 +150,7 @@
 .font2{
   font-family: "Anton";
   font-size: 20px;
+  color: white;
 }
 
 /*font end here*/
