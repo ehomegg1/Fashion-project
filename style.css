@@ -2,10 +2,6 @@
 	filter: brightness(75%);
 }
 
-.overlay-dark:hover{
-	filter: brightness(50%);
-	transition: 0.5s ease;
-}
 
 
 
@@ -74,7 +70,21 @@
   right:25%;
   top:50%;
   transform: translate(-50%,-50%);
+  visibility: hidden;
 }
+
+.overlay-dark:hover{
+  filter: brightness(50%);
+  transition: 0.5s ease;
+}
+
+.overlay-dark:hover.centered{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/*Show Button on Hover Testing End*/
 
 
 
